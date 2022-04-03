@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="styles.css" />
+    <title>JS tutorial</title>
+  </head>
+  <body>
+    <header>
+      <h1 class="titulo" id="top">JavaScript Tutorial</h1>
+    </header>
+   <nav class="sumary">
+    <h2 class="sumary-title">Sumário</h2>
+    <ol>
+      <li><a href="#data-types">• Tipos de Dados</a></li>
+      <li><a href="#variables">• Variáveis</a></li>
+      <li><a href="#scope">• Scope</a></li>
+      <li><a href="#objects">• Objects</a></li>
+      <li><a href="#array">• Array</a></li>
+      <li><a href="#new">• New</a></li>
+      <li><a href="#function">• Function</a></li>
+      <li><a href="#prototypes">• Prototype</a></li>
+      <li><a href="#comparation">• Comparação</a></li>
+      <li><a href="#condicional-operator">• Operdador condicional Ternário</a></li>
+      <li><a href="#of">• For of</a></li>
+      <li><a href="#in">• For in</a></li>
+      <li><a href="#throw-try-catch">• Throw, Try e Catch</a></li>
+      <li><a href="#classes">• Classes</a></li>
+      <li> <a href="#about">• Sobre</a></li>
+    </ol>
+  </nav>
+   <nav class="back">
+    <a href="#top" class="back-button">Voltar ao topo</a>
+    </nav> 
+    <main>
+      <section id="data-types" class="topico">
+        <h3 class="topico-titulo">Tipos de Dados</h3>
+          <p class="topico-conteudo">
+            <h4>
+              String
+            </h4>
+            Dado em Texto
+           <br>
+           <ul>
+             <li>
+              •aspas duplas ""
+             </li>
+             <li>
+              •aspas simples ''
+            </li>
+            <li>
+              •crase ``  -->  a crase nos permite criar textos com quebra de linha, alem de envolver operações
+            </li>
+           </ul>
+          <h4>
+            Number
+          </h4>
+           Podem ser: <br>
+           <ol>
+             <li>
+               • Inteiros
+             </li>
+             <li>
+               •Quebrados, também chamados de float
+             </li>
+             <li>
+               •Nan (Not a Number)
+             </li>
+             <li>
+               •Infinito (Infinity)
+             </li>
+            </ol>
+           <h4>
+             Boolean
+           </h4>
+           somente dois valores <br>
+           <ol>
+             <li>
+               •true
+             </li>
+             <li>
+               •false
+             </li>
+             <li>
+               undefinied --> não definido 
+             </li> 
+             <li>
+               null --> não possui nada dentro 
+             </li>
+           </ol>
+           
+           
+           OBS: null e undefinied sao diferentes  <br>
+           
+           Classificaçoes dos tipos de dados: <br>
+           <h4>
+             Primitivos --> são imutáveis 
+           </h4>
+           <ol>
+             <li>
+               •String
+             </li>
+             <li>
+               •Number
+             </li>
+             <li>
+               •Boolean
+             </li>
+             <li>
+               •undefinied
+             </li>
+             <li>
+               •Symbol
+             </li>
+             <li>
+               •BigInit
+             </li>
+           </ol>
+           
+           <h4>
+             Estruturais
+           </h4>
+           <ol>
+             <li>
+               •Object
+             </li>
+             <li>
+               •Function
+             </li>
+           </ol>
+           <h4>
+             Primitivo estrutural
+           </h4>
+           <ol>
+             <li>
+               •null
+             </li>
+           </ol>
+           </p>
+      </section>
+      <section id="variables" class="topico">
+        <h3 class="topico-titulo">Variáveis</h3>
+          <p class="topico-conteudo"></p>
+          As variaveis sao nomes simbolicos para guardarmos valores, podemos declarar variaveis de 3 diferentes maneiras:
+          <ol>
+            <li>
+              •var
+            </li>
+            <li>
+              •let
+            </li>
+            <li>
+              •const --> Não permite que o valor atribuido a ela seja mudado.
+            </li>
+          </ol>
+         Exemplos:
+          <pre><code>
+            var clima = 'quente'
+            console.log(clima) // 'quente'
+          </code>
+        </pre>
+
+          Podemos descobrir o tipo de uma variavel usando o typeof. <br>  Ex:
+          <pre><code>
+            console.log(typeof clima) //imprimirá string
+          </code></pre>
+          O JS é uma linguagem fracamente typada, isso significa que ela é bem dinâmica e não muito exigente em sua escrita. 
+        </p>
+      </section>
+      <section id="array" class="topico">
+        <h3 class="topico-titulo">Array</h3>
+          <p class="topico-conteudo">
+            • Array é como uma lista, um agrupamento de dados. <br> Ex:
+            <pre>
+              <code>
+                var frutas = ['Maçã', 'Banana']
+              </code>
+            </pre>
+          </p>
+      </section>
+      <section id="objects" class="topico">
+        <h3 class="topico-titulo">Objetos</h3>
+          <p class="topico-conteudo">
+            Objetos possuem propriedades/atributos e funcionalidades, que quando estao inseridas num objeto sao chamadas de métodos.  <br> Ex:
+            <pre>
+              <code>
+                var civil = {
+                  nome: 'Davi',
+                  idade: 16,
+                  endereco: 'Vila Velha',
+                  andar: function () {
+                    console.log('andar')
+                  }
+                }
+              </code>
+            </pre>
+      </section>
+      <section id="scope" class="topico">
+        <h3 class="topico-titulo">Escopo</h3>
+          <p class="topico-conteudo">
+            Escopo --> visibilidade  de uma variavel, cada variavel possui um escopo diferente 
+            <br>
+            podemos criar um Bloco de escopo envolvido em {}, e dentro dele, os valores serão locais, e cada variavel lida de maneira diferente com a dinamica desse bloco
+            <br>
+             escopo var --> ao declarar uma variavel usando o var, observamos uma caracteristica do js, o hoisting. O JS lê o código verticalmente, porem, a declaração de variaveis é elevada, como se fossem antes de tudo. 
+            <br>
+            OBS: apenas a sua declaraçõa sofre esse efeito, a atribuição dela não. 
+            <br>
+             Ex:
+            <pre><code>
+              console.log('O valor de x é', x)
+              var x = 2
+             </code></pre>
+             Nesse caso, o terminal imprimirá 'o valor de x é undefinied' , pois ele elevou a declaração da variavel x, mas nao a sua atribuição de valor.
+            <br>
+            escopo let --> diferentemente do var, o let não sofre o efeito de hoisting, e alem disso, so funciona no escopo onde foi criada.
+            <pre><code>
+               let y = 1
+
+                {
+                 let y = 2
+                 console.log(y) //imprimirá 2
+                }
+
+                console.log(y) //imprimirá 1
+            </code></pre>
+            Depedendo de onde o y, foi criado, ele pode ter diferentes valores.
+            Porém, podemos dentro de um bloco alterar o valor de uma variavel let declarada fora. 
+            <pre><code>
+              let y = 1
+
+              {
+                 y = 2
+              }
+
+              console.log(y) //imprimirá '2'
+            </code></pre>
+          </p>  
+      </section>
+      <section id="function" class="topico">
+        <h3 class="topico-titulo">Function</h3>
+          <p class="topico-conteudo">
+            As funções sofrem o efeito de hoisting 
+            <br>
+            As funções tambem possuem escopo
+            <br>
+            Exemplo:
+          </p>
+         <pre><code>
+          let fruta = 'maça'
+
+          function comprarFruta(fruta) {
+            fruta = 'laranja'
+            return fruta
+          }
+
+          console.log(fruta) // imprimirá maça
+          console.log(comprarFruta(fruta)) //imprimira laranja
+      </code></pre>
+      Apenas dentro da função a variavel sofreu alteração. Porém, quando não há paramêtros na função e alteramos o valor de uma variavel, ela é mudada tambem fora da função.
+      <br>
+      Exemplo:
+      <pre><code>
+        let fruta
+
+        function comprarFruta() {
+           fruta = 'laranja'
+           return fruta
+        }
+
+        console.log(fruta) // imprimirá undefinied, pois apenas declaramos a variavel, nao atribuimos valor
+        console.log(comprarFruta()) //imprimirá laranja
+      </code></pre>
+      </section>
+      <section id="prototypes" class="topico">
+        <h3 class="topico-titulo">Prototypes</h3>
+          <p class="topico-conteudo">
+            O prototype é um conceito do js que faz com que a maioria dos objetos criados tenham métodos prontos. 
+            Algumas dessas funcionalidades:
+            <ol>
+              <li>
+                • .lenght
+              </li>
+              <li>
+                • .splice
+              </li>
+              <li>
+                • .sort
+              </li>
+              <li>
+                • .valueOf
+              </li>
+              <li>
+                • .hasOwnProperty
+              </li>
+            </ol>
+<br>
+            Algumas delas não funcionam em todo o tipo de dado, como o .toFixed() , que serve para tornarmos um número decimal em inteiro, portanto, não funciona em dados do tipo string por exemplo.
+            Outro detalhe é que algumas delas não alteram a variavel original
+            <br>
+            <br>
+            Type conversion x Type coersion
+            <br>
+            <br>
+            O type conversion é quando alguém altera o tipo de um dado manualemente. Enquanto que o Type coersion é quando essa alteração é feita pelo computador.
+            <br>
+            <br>
+            Exemplos:
+            <pre><code>
+              console.log(Number('9') + 5) 
+              //O número 9 é uma string, porém alteramos manualmente seu tipo para number, o console imprimirá 95
+
+             console.log('9' + 5) // O console imprimirá 95 , pois o 5 foi forçadamente alterado para uma string
+            </code></pre>
+          </p>
+      </section>
+      <section id="new" class="topico">
+        <h3 class="topico-titulo">New</h3>
+          <p class="topico-conteudo">
+            Fazendo uma declaração com o new, podemos criar um objeto, e nele podemos inserir propriedades.
+            Exemplos:
+          </p>
+          <pre><code>
+            let name = new String('Davi')
+            let age = new Number(16)
+            let date = new Date('2021-12-26')
+
+            name.surName = 'Moreira'
+            console.log(name)
+            console.log(date)
+          </code></pre>
+      </section>
+      <section id="comparation" class="topico">
+        <h3 class="topico-titulo">Comparação</h3>
+          <p class="topico-conteudo">
+            == -> para comparar duas variaveis, devolve true se forem iguais
+            <br>
+            != -> devolve true se forem diferentes
+            <br>
+            === -> devolve true se forem iguais em tipo e em valor
+            <br>
+            !== -> devolve true se tiverem um tipo diferente 
+            <br>
+            Exemplos:
+            <pre><code>
+              let one = 1
+              let two = 2
+
+              console.log(one == 1) //true
+              console.log(one != 2) //true
+              console.log(two != 2) //false
+              console.log(one === '1') //false
+              console.log(one === 1) //true
+              console.log(two !== '2') //true
+              console.log(two !== 2) //false
+            </code></pre>
+          </p>
+      </section>
+      <section id="condicional-operator" class="topico">
+        <h3 class="topico-titulo">Operador Condicional Ternário</h3>
+          <p class="topico-conteudo"></p>
+          Condição então valor 1 se não valor 2
+          <br>
+          Exemplos:
+          <pre><code>
+            let pao = true
+            let queijo = true
+            
+            const cafeDaManha = pao && queijo ? 'tem pão e queijo' : 'Falta um ingrediente'
+            
+            console.log(cafeDaManha)
+          </code></pre>
+          Exemplo 2:
+          <pre><code>
+            let age = 16
+
+              const canDrive = age >= 18 ? 'can drive' : "cant't drive"
+
+              console.log(canDrive) // imprimirá cant't drive
+          </code></pre>
+      </section>
+      <section id="of" class="topico">
+        <h3 class="topico-titulo"> For of  </h3>
+          <p class="topico-conteudo"></p>
+          Usado para acessar propriedades de Arrays
+     <pre>
+       <code>
+        let animals = ['Onça', 'Leopardo', 'Pinguim']
+
+        for (let animal of animals) {
+          console.log(animals)
+        }        
+       </code>
+     </pre>
+      </section>
+      <section id="in" class="topico">
+        <h3 class="topico-titulo"> For in </h3>
+          <p class="topico-conteudo"></p>
+          Usado para acessar propriedades de um objeto. <br>
+          Exemplo:
+          <pre><code>
+            let cidadao = {
+              nome: 'Joao',
+              idade: 40,
+              peso: 70
+            }
+            
+            for (let propriedade in cidadao) {
+              console.log(propriedade) //imprimira o nome da propriedade
+              console.log(person[propriedade]) //imprimirá o valor da propriedade
+            }
+          </code></pre>
+      </section>
+      <section id="throw-try-catch" class="topico">
+        <h3 class="topico-titulo">Throw e try catch</h3>
+          <p class="topico-conteudo"></p>
+          Essa é uma maneira de rodarmos uma função. <br> Exemplos:
+          <pre><code>
+            function getRectArea(width, height) {
+              if (isNaN(width) || isNaN(height)) {
+                throw 'Parameter is not a number!'
+              }
+            }
+            
+            try {
+              getRectArea(3, 'A')
+            } catch (e) {
+              console.error(e)
+              // expected output: "Parameter is not a number!"
+            }
+          </code></pre>
+      </section>
+      <section id="classes" class="topico">
+        <h3 class="topico-titulo">Classes</h3>
+        <p class="topico-conteudo">
+          No JS, as classes são como moldes para criarmos objetos. Nela, podemos
+          ter métodos, que são funções como propriedades de objetos. É muito
+          comum que nelas tenhamos um método chamado
+          <code>constructor()</code> , ele serve para declarar e adicionar
+          valores às propriedades. Exemplo:
+        </p>
+          <pre><code>
+            //criando a classe
+
+            class identidade {
+            constructor(nome,cpf,anoNascimento) this.nome = nome this.cpf = cpf
+            this.anoNascimento = anoNascimento } 
+
+
+            //criando nova variável moldada na classe feita 
+
+           var identidadeDavi = new identidade("Davi",999,2005)
+          </code></pre>
+          <p class="topico-conteudo">
+          É possível também criarmos a extensão de uma classe. Essa nova extensão terá todas as propriedades da classe-mãe, e ainda podemos adicionar mais algumas.
+          </p>
+          <pre><code>
+            class cartaoSaude extends identidade {
+              constructor(endereco, vacina)
+            }
+          </code></pre>
+          <p class="topico-conteudo">
+          Em uma extensão, existe o <code>super()</code> usado para chamarmos uma propriedade da classe mãe. Exemplo:
+          </p>
+          <pre><code>
+            class cartaoSaude extends identidade {
+              constructor(endereco, vacina)
+              super(nome,cpf)
+            }
+          </code></pre>
+          <p class="topico-conteudo">
+          Caso não chamamos a propriedade da classe-mãe usando o super(), podemos sobrescrever uma propriedade.
+         </p>
+          <pre><code>
+            class cartaoSaude extends identidade {
+              constructor(endereco, vacina)
+              super(nome,cpf)
+            }
+          </code></pre>
+        </p>
+      </section>
+    </main>
+    <footer id="about" class="rodape">
+      <div class="about-me">
+        <h1 class="about-me-title">Quem eu sou?</h1>
+        <p class="about-me-conteudo">
+          Meu nome é Davi Moreira, tenho 16 anos e almejo entrar no mercado de desenvolvedor, começando pelo Front-end.
+        </p>
+      </div>
+     <div class="project">
+       <h1 class="project-title">
+         Sobre esse Site
+       </h1>
+       <p class="project-conteudo">
+        Fiz esse site com o intuito de registrar o que acho mais complicado do JavaScript, e de quebra, treino meu HTML e CSS. <br>Por isso, os termos e a linha de pensamento usada facilitam meu entendimento. <br>
+        Se encontrar alguma informação errada, por favor me contate.
+       </p>
+     </div>
+     <div class="contact">
+       <h1 class="contact-title">Contato: </h1>
+         <p class="contact-conteudo">
+          <a href="https://github.com/davimoreiraa">Github</a>
+          <a href="https://twitter.com/davimor_">Twitter</a>
+           <a href="mailto:davimoreiraasantoss@gmail.com">E-mail</a>
+         </p>
+     </div>
+    </footer>
+  </body>
+</html>

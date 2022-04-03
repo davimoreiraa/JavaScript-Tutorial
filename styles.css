@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;900&display=swap');
+
+body {
+  background: linear-gradient(rgb(212, 228, 228), grey);
+  margin-left: 2rem;
+  font-family: 'Lato', sans-serif;
+}
+
+/* ----------------------------------------------------------- CABEÇALHO -----------------------------------------------------------*/
+
+header {
+  text-align: center;
+  vertical-align: center;
+  margin-bottom: 3rem;
+}
+
+header a {
+  font-size: 2rem;
+  color: black;
+  padding-right: 0;
+  line-height: 1rem;
+}
+
+.back {
+  width: 150px;
+  height: 100px;
+  background: rgb(36, 88, 88);
+  position: fixed;
+  right: 2rem;
+  bottom: 2rem;
+  display: flex;
+  border-radius: 8px;
+}
+
+.back-button {
+  margin: auto;
+  color: white;
+}
+
+.titulo {
+  display: inline;
+  font-size: 3rem;
+  font-weight: 900;
+}
+
+.sumary {
+  margin-bottom: 1rem;
+}
+
+.sumary-title {
+  font-size: 2.5rem;
+  margin-left: 3rem;
+  margin-bottom: 1rem;
+}
+
+.sumary li {
+  font-size: 2rem;
+  padding-bottom: 14px;
+}
+
+/* ------------------------------------------------------------ CORPO ------------------------------------------------------------- */
+
+.topico {
+  margin-top: 7rem;
+}
+
+.topico-titulo {
+  font-size: 2.7rem;
+  margin-bottom: 2.7rem;
+  font-weight: 900;
+}
+
+.topico-conteudo,
+.topico {
+  font-size: 1.9rem;
+}
+
+h4 {
+  font-size: 2.4rem;
+  margin-bottom: 1.5rem;
+  margin-top: 1.3rem;
+  font-weight: 900;
+}
+
+code {
+  font-family: sans-serif;
+  font-size: 1.9rem;
+}
+
+pre {
+  background: rgb(218, 219, 221);
+  margin: 1rem 0;
+  margin-right: 1.5rem;
+  border-radius: 8px;
+  padding-left: 5px;
+}
+
+/* ----------------------------------------------------------- RODAPE ------------------------------------------------------------*/
+
+.rodape {
+  margin: 3rem auto 1rem;
+  width: 80vw;
+  background-color: black;
+  color: white;
+  padding-left: 1rem;
+  border-radius: 8px;
+}
+
+.about-me-title {
+  font-size: 2.7rem;
+  padding-top: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.project-title,
+.contact-title {
+  margin-bottom: 1rem;
+  font-size: 2.7rem;
+  margin-top: 1.5rem;
+}
+
+.about-me-conteudo,
+.project-conteudo {
+  line-height: 22px;
+  font-size: 22px;
+}
+
+.contact-conteudo {
+  line-height: 25px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.contact-conteudo a {
+  color: white;
+  font-size: 23px;
+  margin-bottom: 1rem;
+}
